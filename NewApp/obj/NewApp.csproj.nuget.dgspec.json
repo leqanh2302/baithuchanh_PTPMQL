@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj": {}
+    "d:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj": {}
   },
   "projects": {
-    "D:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj": {
+    "d:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj",
+        "projectUniqueName": "d:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj",
         "projectName": "NewApp",
-        "projectPath": "D:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj",
+        "projectPath": "d:\\baithuchanh_PTPMQL\\NewApp\\NewApp.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\baithuchanh_PTPMQL\\NewApp\\obj\\",
+        "outputPath": "d:\\baithuchanh_PTPMQL\\NewApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"

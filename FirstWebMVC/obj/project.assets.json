@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\baithuchanh_PTPMQL\\FirstFebMVC\\FirstFebMVC.csproj",
+      "projectUniqueName": "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj",
       "projectName": "FirstFebMVC",
-      "projectPath": "D:\\baithuchanh_PTPMQL\\FirstFebMVC\\FirstFebMVC.csproj",
+      "projectPath": "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\baithuchanh_PTPMQL\\FirstFebMVC\\obj\\",
+      "outputPath": "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
