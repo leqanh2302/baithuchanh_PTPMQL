@@ -7,7 +7,7 @@ namespace NewApp.Models
         public string FullName {get; set;}
         public string Address {get; set;}
         public int Age {get; set;}
-        public void nhapthongtin()
+        public void Nhapthongtin()
         {
             System.Console.WriteLine("Full name = ");
             FullName = Console.ReadLine();
