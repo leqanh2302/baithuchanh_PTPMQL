@@ -14,7 +14,6 @@
       int nguyen = a/b;
       System.Console.WriteLine("chialaynguyen = " +nguyen);
       int du =a%b;
-      System.Console.WriteLine("chialaydu = " +du);
 
     }
 }
