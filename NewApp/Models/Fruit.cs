@@ -1,5 +1,5 @@
 using NewApp.Models;
-public class Employee
+public class Fruit
 {
     private static void main(string[] args)
     {
