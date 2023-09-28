@@ -1,0 +1,4 @@
+D:\baithuchanh_PTPMQL\obj\Debug\net7.0\baithuchanh_PTPMQL.GeneratedMSBuildEditorConfig.editorconfig
+D:\baithuchanh_PTPMQL\obj\Debug\net7.0\baithuchanh_PTPMQL.AssemblyInfoInputs.cache
+D:\baithuchanh_PTPMQL\obj\Debug\net7.0\baithuchanh_PTPMQL.AssemblyInfo.cs
+D:\baithuchanh_PTPMQL\obj\Debug\net7.0\baithuchanh_PTPMQL.csproj.CoreCompileInputs.cache
