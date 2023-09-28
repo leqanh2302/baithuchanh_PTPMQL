@@ -7,7 +7,7 @@ for (int i = 0; i<2; i++)
     std.NhapThongTin();
     arrList.Add(std);
 }
-foreach(Student std in stdList)
+foreach(Student std in arrList)
 {
-
+std.HienThiThongTin();
 }
