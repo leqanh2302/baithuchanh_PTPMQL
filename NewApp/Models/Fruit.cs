@@ -10,6 +10,7 @@ namespace NewApp.Models
             TenQua = Console.ReadLine();
             System.Console.WriteLine("Gia");
             Gia = Convert.ToFloat(Console.ReadLine());
+        }
         public void Display()
         {
             System.Console.WriteLine("{0} - {1} - {2} gia", TenQua, Gia);
