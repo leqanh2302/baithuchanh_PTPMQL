@@ -1,26 +1,18 @@
-namespace NewApp.Models
+using NewApp.Models;
+public class Employee
 {
-    public class Employee
+    private static void Main(string[] args)
     {
-        public int MaNhanVien {get; set;}
-        public string TenNhanVien {get; set;}
-        public int Tuoi {get; set;}
-        public float Luong {get; set;}
-        publicvoid EnterData()
-        {
-            System.Console.WriteLine("MaNhanVien = ");
-            MaNhanVien = Convert.ToInt16(Console.ReadLine());
-            System.Console.WriteLine("TenNhanVien = ");
-            TenNhanVien = Console.ReadLine();
-            System.Console.WriteLine("Tuoi");
-            Tuoi = Convert.ToInt16(Console.ReadLine());
-            System.Console.WriteLine("Luong");
-            Convert.ToFloat(Console.ReadLine());
-        }
-        public void Display()
-        {
-            System.Console.WriteLine("{0} - {1} - {2} tuoi", MaNhanVien, TenNhanVien, Tuoi, Luong);
-        }
+        //khoitaodoituong
+        Employee emp1 = new Employee();
+        Employee emp2 = new Employee();
+        //gangiatrithuoctinh
+        Emp1.FullName = "Nguy Van A";
+        Emp2.Address = "Ha Noi";
+        //goi pt hien thi thong tin
+        std1.Display();
+        std2.Display();
     }
 }
-/// Le Quynh Anh_2021050074
+     
+// Le Quynh Anh_2021050074
