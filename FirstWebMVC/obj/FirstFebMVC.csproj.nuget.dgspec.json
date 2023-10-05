@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj": {}
+    "D:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj": {}
   },
   "projects": {
-    "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj": {
+    "D:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj",
+        "projectUniqueName": "D:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj",
         "projectName": "FirstFebMVC",
-        "projectPath": "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj",
+        "projectPath": "D:\\baithuchanh_PTPMQL\\FirstWebMVC\\FirstFebMVC.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "d:\\baithuchanh_PTPMQL\\FirstWebMVC\\obj\\",
+        "outputPath": "D:\\baithuchanh_PTPMQL\\FirstWebMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"

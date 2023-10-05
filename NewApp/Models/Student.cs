@@ -1,18 +1,29 @@
-using NewApp.Models;
-public class Student
+namespace NewApp.Models
 {
-    private static void Main(string[] args)
+    public class Employee
     {
-        //khoitaodoituong
-        Student std1 = new Student();
-        Student std2 = new Student();
-        //gangiatrithuoctinh
-        std1.FullName = "LQA";
-        std2.Address = "Ha Noi";
-        //goi pt hien thi thong tin
-        std1.Display();
-        std2.Display();
-    }
+        public string FullName {get; set;}
+        public string Address {get; set;}
+        public int EmployeeID {get; set;}
+        
+        public void EnterData()
+        {
+            System.Console.WriteLine("FullName = ");
+            FullName = Console.ReadLine();
+            System.Console.Write("Address = ");
+            Address = Console.ReadLine();
+            System.Console.Write("EmployeeID =");
+            try{
+                EmployeeID = Convert.ToInt16(Console.ReadLine());    
+            }catch(Exception e)
+            {
+                EmployeeID = 0;
+            }
+        }  
+        public void Display()
+        {
+            System.Console.WriteLine("{0} - {1} - {2} ", FullName, Address, EmployeeID);  
+        }    
+    }    
 }
-     
-// Le Quynh Anh_2021050074
+/// Le Quynh Anh_2021050074
