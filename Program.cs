@@ -1,17 +1,16 @@
-﻿using System.Security.Cryptography;
-using NewApp.Model;
-public class Program
+﻿using System.Collections;
+using NewApp.Models;
+internal class program{
+ArrayList stdList = new ArrayList();
+for (int i = 0; i<2; i++)
 {
-    private static void Main(String[] args)
-    {
-    person ps1 = new person();
-    person ps2 = new person();
-    ps1.FullName = "NVA";
-    ps1.Address = "HN";
-    ps1.Display();
-    ps2.Display();
-    }
-    public void 
-
-
+    Student std = new Student();
+    std.NhapThongTin();
+    stdList.Add(std);
 }
+foreach(Student std in stdList)
+{
+  std.HienThiThongTin();
+}
+}
+//Le Quynh Anh_2021050074

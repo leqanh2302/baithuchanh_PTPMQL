@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj": {}
+    "d:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj": {}
   },
   "projects": {
-    "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj": {
+    "d:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
+        "projectUniqueName": "d:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
         "projectName": "baithuchanh_PTPMQL",
-        "projectPath": "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
+        "projectPath": "d:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\baithuchanh_PTPMQL\\obj\\",
+        "outputPath": "d:\\baithuchanh_PTPMQL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
