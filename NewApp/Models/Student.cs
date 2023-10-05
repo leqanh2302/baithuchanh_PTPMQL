@@ -1,29 +1,30 @@
-namespace NewApp.Models
-{
-    public class Employee
-    {
+ namespace NewApp.Models
+ {
+     public class Student{
         public string FullName {get; set;}
         public string Address {get; set;}
-        public int EmployeeID {get; set;}
-        
-        public void EnterData()
-        {
-            System.Console.WriteLine("FullName = ");
+        public int Age {get; set;}
+        public void EnterData(){
+            System.Console.Write("Full name");
             FullName = Console.ReadLine();
-            System.Console.Write("Address = ");
+            System.Console.Write("Address");
             Address = Console.ReadLine();
-            System.Console.Write("EmployeeID =");
+            System.Console.Write("Age");
             try{
-                EmployeeID = Convert.ToInt16(Console.ReadLine());    
+                Age = Convert.ToInt16(Console.ReadLine());
             }catch(Exception e)
             {
-                EmployeeID = 0;
+                Age = 0;
             }
-        }  
+        }
         public void Display()
         {
-            System.Console.WriteLine("{0} - {1} - {2} ", FullName, Address, EmployeeID);  
-        }    
-    }    
-}
-/// Le Quynh Anh_2021050074
+            System.Console.WriteLine("{0} - {1} - {2} tuoi", FullName, Address, Age);
+        }
+
+
+     }
+
+ }
+ 
+// Le Quynh Anh_2021050074
