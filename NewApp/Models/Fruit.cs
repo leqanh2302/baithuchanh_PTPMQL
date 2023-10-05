@@ -1,18 +1,25 @@
-using NewApp.Models;
-public class Fruit
+namespace NewApp.Models
 {
-    private static void main(string[] args)
-    {
-        //khoitaodoituong
-        Fruit fr1 = new Fruit();
-        Fruit fr2 = new Fruit();
-        //gangiatrithuoctinh
-        Fruit1.Name = "Orange";
-        Fruit2.NguonGoc = "Viet Nam";
-        //goi pt hien thi thong tin
-        fr1.Display();
-        fr2.Display();
+public class Fruit{
+    public string Name{get; set;}
+    public int Price{get; set;}
+    public void NhapThongTin(){
+        System.Console.Write("Name =");
+        Name = Console.ReadLine();
+        System.Console.Write("Price =");
+        try{
+            Price = Convert.ToInt16(Console.ReadLine());
+        }catch(Exception e)
+        {
+            Price = 0;
+        }
+      
+    }  
+    public void HienThi(){
+        System.Console.WriteLine("{0} - {1} ", Name, Price);
     }
+}
+    
 }
      
 // Le Quynh Anh_2021050074
