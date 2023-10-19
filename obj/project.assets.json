@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\baithuchanh_PTPMQL\\DemoMVC\\DemoMVC.csproj",
       "projectName": "DemoMVC",
       "projectPath": "D:\\baithuchanh_PTPMQL\\DemoMVC\\DemoMVC.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
       "outputPath": "D:\\baithuchanh_PTPMQL\\DemoMVC\\obj\\",
+=======
+      "projectUniqueName": "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
+      "projectName": "baithuchanh_PTPMQL",
+      "projectPath": "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\baithuchanh_PTPMQL\\obj\\",
+>>>>>>> 7f45b2804ece5891e89d42a48a6c2417cf775427
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -55,9 +63,12 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+<<<<<<< HEAD
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
           },
+=======
+>>>>>>> 7f45b2804ece5891e89d42a48a6c2417cf775427
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

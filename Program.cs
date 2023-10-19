@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,3 +26,22 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+=======
+﻿using System.Security.Cryptography;
+using NewApp.Model;
+public class Program
+{
+    private static void Main(String[] args)
+    {
+    person ps1 = new person();
+    person ps2 = new person();
+    ps1.FullName = "NVA";
+    ps1.Address = "HN";
+    ps1.Display();
+    ps2.Display();
+    }
+    public void 
+
+
+}
+>>>>>>> 7f45b2804ece5891e89d42a48a6c2417cf775427
