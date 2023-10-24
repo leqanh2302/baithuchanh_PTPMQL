@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "iRlfpC9+t5WCsyP0i5RJIRiYEnG8RmIE39N6V3QmuCHqgpTUJA7F3TKBDNqx/PAx1T+BGBkIEipTLd9rwAfkyQ==",
   "success": true,
   "projectFilePath": "D:\\baithuchanh_PTPMQL\\DemoMVC\\DemoMVC.csproj",
-=======
-  "dgSpecHash": "m8F+r7HkRSIE7G3XEpQkxkfaZmjrk7RTEXcmXL86GmpBcNsEwv+cev0Kj5UORmkEsRTcSIKBnVG4nh/BWrz8ZQ==",
-  "success": true,
-  "projectFilePath": "d:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
->>>>>>> 7f45b2804ece5891e89d42a48a6c2417cf775427
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\baithuchanh_PTPMQL\\DemoMVC\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

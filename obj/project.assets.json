@@ -13,19 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\baithuchanh_PTPMQL\\DemoMVC\\DemoMVC.csproj",
       "projectName": "DemoMVC",
       "projectPath": "D:\\baithuchanh_PTPMQL\\DemoMVC\\DemoMVC.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
       "outputPath": "D:\\baithuchanh_PTPMQL\\DemoMVC\\obj\\",
-=======
-      "projectUniqueName": "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
-      "projectName": "baithuchanh_PTPMQL",
-      "projectPath": "D:\\baithuchanh_PTPMQL\\baithuchanh_PTPMQL.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\baithuchanh_PTPMQL\\obj\\",
->>>>>>> 7f45b2804ece5891e89d42a48a6c2417cf775427
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -63,12 +55,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-<<<<<<< HEAD
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
           },
-=======
->>>>>>> 7f45b2804ece5891e89d42a48a6c2417cf775427
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
@@ -76,5 +65,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\baithuchanh_PTPMQL\\DemoMVC\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
