@@ -3,16 +3,16 @@ using DemoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 namespace DemoMVC.Controllers
 {
-    public class PersonController : Controller
+    public class EmployeeController : Controller
     {
         public IActionResult Index()
         {
           return View();  
         }
         [HttpPost]
-        public IActionResult Index(Person ps )
+        public IActionResult Index(Employee emp)
         {
-            string strResult = "Hello"+ ps.personID+"-"+ps.fullname;
+            string strResult = "Hello: " + emp.fullname + "-"+emp.MaNV + "-" + emp.TuoiNV + "-" + emp.Luong;
             ViewBag.thongbao = strResult;
             return View();
         }
