@@ -12,7 +12,7 @@ namespace DemoMVC.Controllers
         public IActionResult Index(int personID, string fullname)
         {
             string str = "Hello" + personID + "-" + fullname; 
-            ViewBag.Thongbao = str;
+            ViewBag.thongbao = str;
             return View();
         }
     }
