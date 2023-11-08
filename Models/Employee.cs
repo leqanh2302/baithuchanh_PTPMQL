@@ -1,8 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace DemoMVC.Models
 {
-    public class Employee:Person
+    public class Employee : Person
     {
-        public string fullname{get;set;}
+        public string Fullname{get;set;}
         public int MaNV{get;set;}
         public int TuoiNV{get;set;}
         public int Luong{get;set;}

@@ -17,20 +17,12 @@ public class HomeController : Controller
     {
         return View();
     }
-
-    public IActionResult Privacy()
+    [HttpPost]
+    public IActionResult Index(string Fullname, string Address)
     {
+        String strOutput = "Xin chao" + Fullname + "den tu" + Address;
+        ViewBag.Message = strOutput;
         return View();
-    }
-    public string Demo()
-    {
-        return "hello";
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
 //Le Quynh Anh_2021050074

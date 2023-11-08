@@ -1,12 +1,9 @@
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-
-namespace MvcMovie.Models;
-public class HeThongPhanPhoi
+namespace DemoMVC.Models
 {
-    public string MaHTPP{set;get;}
-    public string TenHTPP{set;get;}
-    
+    public class HeThongPhanPhoi
+    {
+        public string MaHTTP{get; set;}
+        public string TenHTTP{get; set;}
+    }
 }
-
 //Le Quynh Anh_2021050074

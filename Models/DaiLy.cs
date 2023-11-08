@@ -1,16 +1,13 @@
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-
-namespace MvcMovie.Models;
-public class DaiLy: HeThongPhanPhoi
+namespace DemoMVC.Models
 {
-    public string MaDaiLy{set;get;}
-    public string TenDaiLy{set;get;}
-    public string DiaChi{set;get;}
-    public string NguoiDaiDien{set;get;}
-    public string DienThoai{set;get;}
-    public string MaHTPP{set;get;}
-
+    public class DaiLy : HeThongPhanPhoi
+    {
+        public string MaDaiLy {get; set;}
+        public string TenDaiLy {get; set;}
+        public string DiaChi {get; set;}
+        public string NguoiDaiDien {get; set;}
+        public string DienThoai {get; set;}
+    }
 }
-
+        
 //Le Quynh Anh_2021050074
