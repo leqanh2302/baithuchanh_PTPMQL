@@ -1,6 +1,6 @@
 namespace DemoMVC.Models
 {
-    public class DaiLy : HeThongPhanPhoi
+    public class DaiLy 
     {
         public string MaDaiLy {get; set;}
         public string TenDaiLy {get; set;}

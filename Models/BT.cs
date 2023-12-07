@@ -4,7 +4,7 @@ namespace DemoMVC.Model
 {
     public class BTluong
     {
-        public string HoTen {get; set;}
+        public string Fullname {get; set;}
         public int HSluong {get; set;}
         public int PhuCap {get; set;}
         public int Luongcb {get; set;}

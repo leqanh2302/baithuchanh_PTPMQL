@@ -1,152 +1,62 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DemoMVC.Data;
-using DemoMVC.Models;
-
-namespace DemoMVC.Controllers
+using System.Data;
+using OfficeOpenXml;
+namespace DemoMVC.Models.Process
 {
-    public class PersonController : Controller
+    public class ExcelProcess
     {
-        private readonly ApplicationDbContext _context;
-        public PersonController(ApplicationDbContext context)
+        public DataTable ExcelToDataTable(string strPath)
         {
-            _context = context;
-        } 
-        public async Task<IActionResult> Index()
-        {
-              return _context.Person != null ? 
-                          View(await _context.Person.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Person'  is null.");
-        }
-
-        public async Task<IActionResult> Details(string id)
-        {
-            if (id == null || _context.Person == null)
+            FileInfo fi = new FileInfo(strPath);
+            ExcelPackage excelPackage = new ExcelPackage(fi);
+            DataTable dt = new DataTable();
+            ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[0];
+            //check if the worksheet is completely empty
+            if (worksheet.Dimension == null)
             {
-                return NotFound();
+                return dt;
             }
-
-            var person = await _context.Person
-                .FirstOrDefaultAsync(m => m.PersonID == id);
-            if (person == null)
+            //create a list to hold the column names
+            List<string> columnNames = new List<string>();
+            //needed to keep track of empty column headers
+            int currentColumn = 1;
+            //loop all columns in the sheet and add them to the datatable
+            foreach (var cell in worksheet.Cells[1, 1, 1, worksheet.Dimension.End.Column])
             {
-                return NotFound();
-            }
-
-            return View(person);
-        }
-
-
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonID,Fullname,Age,Address")] Person person)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(person);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(person);
-        }
-
-
-        public async Task<IActionResult> Edit(string id)
-        {
-            if (id == null || _context.Person == null)
-            {
-                return NotFound();
-            }
-
-            var person = await _context.Person.FindAsync(id);
-            if (person == null)
-            {
-                return NotFound();
-            }
-            return View(person);
-        }
-
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("PersonID,Fullname,Age,Address")] Person person)
-        {
-            if (id != person.PersonID)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
+                string columnName = cell.Text.Trim();
+                //check if the previous header was empty and add it if it was
+                if (cell.Start.Column != currentColumn)
                 {
-                    _context.Update(person);
-                    await _context.SaveChangesAsync();
+                    columnNames.Add("Header_" + currentColumn);
+                    dt.Columns.Add("Header_" + currentColumn);
+                    currentColumn++;
                 }
-                catch (DbUpdateConcurrencyException)
+                //add the column name to the list to count the duplicates
+                columnNames.Add(columnName);
+                //count the duplicate column names and make them unique to avoid the exception
+                //A column named 'Name' already belongs to this DataTable
+                int occurrences = columnNames.Count(x => x.Equals(columnName));
+                if (occurrences > 1)
                 {
-                    if (!PersonExists(person.PersonID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    columnName = columnName + "_" + occurrences;
                 }
-                return RedirectToAction(nameof(Index));
+                //add the column to the datatable
+                dt.Columns.Add(columnName);
+                currentColumn++;
             }
-            return View(person);
-        }
 
-
-        public async Task<IActionResult> Delete(string id)
-        {
-            if (id == null || _context.Person == null)
+            //start adding the contents of the excel file to the datatable
+            for (int i = 2; i <= worksheet.Dimension.End.Row; i++)
             {
-                return NotFound();
+                var row = worksheet.Cells[i, 1, i, worksheet.Dimension.End.Column];
+                DataRow newRow = dt.NewRow();
+                //loop all cells in the row
+                foreach (var cell in row)
+                {
+                    newRow[cell.Start.Column - 1] = cell.Text;
+                }
+                dt.Rows.Add(newRow);
             }
-
-            var person = await _context.Person
-                .FirstOrDefaultAsync(m => m.PersonID == id);
-            if (person == null)
-            {
-                return NotFound();
-            }
-
-            return View(person);
+            return dt;
         }
-
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
-        {
-            if (_context.Person == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.Person'  is null.");
-            }
-            var person = await _context.Person.FindAsync(id);
-            if (person != null)
-            {
-                _context.Person.Remove(person);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool PersonExists(string id)
-        {
-          return (_context.Person?.Any(e => e.PersonID == id)).GetValueOrDefault();
-        }
-        
     }
 }
-//Le Quynh Anh_2021050074

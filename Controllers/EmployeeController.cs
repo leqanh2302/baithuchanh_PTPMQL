@@ -12,7 +12,7 @@ namespace DemoMVC.Controllers
         [HttpPost]
         public IActionResult Index(Employee emp)
         {
-            string strResult = "Hello: " + emp.fullname + "-"+emp.MaNV + "-" + emp.TuoiNV + "-" + emp.Luong;
+            string strResult = "Hello: " + emp.Fullname + "-"+emp.MaNV + "-" + emp.TuoiNV + "-" + emp.Luong;
             ViewBag.thongbao = strResult;
             return View();
         }

@@ -4,8 +4,8 @@ namespace DemoMVC.Model
 {
     public class Student 
     {
-        public int personID {get; set;}
-        public string fullname {get; set;}
+        public int StudentID {get; set;}
+        public string Fullname {get; set;}
         
 
     }

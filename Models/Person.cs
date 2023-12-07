@@ -9,6 +9,7 @@ namespace DemoMVC.Models
         public string PersonID{get;set;}
         public string Fullname{get;set;}
         public string Address{get;set;}
+        
     }
 }
 //Le Quynh Anh_2021050074
