@@ -1,15 +1,10 @@
-<div class="w3-container w3-blue">
-  <h2>Input Person</h2>
-</div>
-
-<form class="w3-container" asp-action="Index">
-  <p>
-  <label>PersonID:</label>
-  <input name="PersonID" class="w3-round-large w3-input w3-border w3-border-blue" type="text"></p>
-  <p>
-  <label>FullName:</label>
-  <input name="FullName" class="w3-round-large w3-input w3-border w3-border-blue" type="text"></p>
-  <p>
-   <input type="submit" value="Send Data"> 
-</form>
-<p>@ViewBag.ThongBao</p>
+<h1> Du lieu gui ve la: @ViewBag.infoPerson</h1>
+<form asp-action="Index">
+    <label> Nhap PersonID: </label>
+    <input type="text" name="PersonID">
+    <label> Nhap Ho ten: </label>
+    <input type="text" name="FullName">
+    <label> Nhap Dia Chi: </label>
+    <input type="text" name="Address">
+    <input type="submit" value="Gui du lieu"
+</form>    

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using MvcMovie.Models;
 using System.Net;
 
-namespace DemoMVC.Controllers
+namespace MvcMovie.Controllers
 {
     public class EmployeeController : Controller
     {
@@ -13,7 +13,7 @@ namespace DemoMVC.Controllers
             [HttpPost]
          public IActionResult Index(Employee emp)
             {
-                string str = emp.FullName + "_" + emp.EmployeeID + "_" + emp.SoDienThoai +"_"+ emp.Address; 
+                string str = emp.FullName + "_" + emp.Age ; 
                 ViewBag.KetQua = str;
                 return View();
 
