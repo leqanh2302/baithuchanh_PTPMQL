@@ -9,19 +9,19 @@ using MvcMovie.Data;
 using MvcMovie.Models;
 
 using MvcMovie.Models.Process;
-using OfficeOpenXml;
-namespace DemoMVC.Controllers
+
+namespace MvcMovie.Controllers
 {
-    public class PersonController : Controller
+    public class PersonController:Controller
     {
-        
-        private readonly ApplicationDbcontext _context;
+    private readonly ApplicationDbcontext _context;
 
         public PersonController(ApplicationDbcontext context)
         {
             _context = context;
         }
         private ExcelProcess _excelPro = new ExcelProcess();
+
         // GET: Person
         public async Task<IActionResult> Index()
         {
@@ -137,6 +137,7 @@ namespace DemoMVC.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
         //upload
          public IActionResult Upload()
         {
@@ -171,6 +172,7 @@ namespace DemoMVC.Controllers
                                     ps.PersonID = dt.Rows[i][0].ToString();
                                     ps.FullName = dt.Rows[i][1].ToString();
                                     ps.Address = dt.Rows[i][2].ToString();
+
                                     _context.Add(ps);
                                 }
                                 await _context.SaveChangesAsync();
@@ -179,24 +181,8 @@ namespace DemoMVC.Controllers
                         }
                     }
                 }
-            return View();
-        }
 
-        // download
-        public IActionResult Download()
-        {
-            var fileName = "PersonList.xlsx";
-            using(ExcelPackage excelPackage = new ExcelPackage())
-            {
-                ExcelWorksheet excelWorksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
-                excelWorksheet.Cells["A1"].Value = "PersonID";
-                excelWorksheet.Cells["B1"].Value = "FullName";
-                excelWorksheet.Cells["C1"].Value = "Adress";
-                var PersonList = _context.Person.ToList();
-                excelWorksheet.Cells["A2"].LoadFromCollection(PersonList);
-                var stream = new MemoryStream(excelPackage.GetAsByteArray());
-                return File(stream,"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",fileName);
-            }
+            return View();
         }
 
         private bool PersonExists(string id)
